@@ -1,3 +1,5 @@
+import { Link, routes } from '@redwoodjs/router'
+
 export const QUERY = gql`
   query AnnoncesVehiculesQuery {
     annonces {
@@ -28,7 +30,11 @@ export const Success = ({ annonces }) => {
       {annonces.map((annonce) => {
         return (
           <article key={annonce.id}>
-            <h2>{annonce.title}</h2>
+            <h2>
+              <Link to={routes.annonceDetail({ id: annonce.id })}>
+                {annonce.title}
+              </Link>
+            </h2>
             <p>Description : {annonce.description}</p>
             <p>Kilométrage : {annonce.kilometrage}</p>
             <p>Année de mise en circulation : {annonce.yearofcirculation}</p>
