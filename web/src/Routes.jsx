@@ -40,9 +40,10 @@ const Routes = () => {
         <Route path="/annonces" page={AnnonceAnnoncesPage} name="annonces" />
       </Set>
       <Set wrap={GarageLayout}>
-        <Route path="/about" page={AboutPage} name="about" />
         <Route path="/" page={HomePage} name="home" />
+        <Route path="/about" page={AboutPage} name="about" />
         <Route path="/annonce-detail/{id:Int}" page={AnnonceDetailPage} name="annonceDetail" />
+        <Route path="/contact" page={ContactPage} name="contact" />
         <Route notfound page={NotFoundPage} />
       </Set>
     </Router>
