@@ -12,6 +12,16 @@ export const QUERY = gql`
       published
       authorId
       createdAt
+      Equipment {
+        id
+        name
+      }
+      Image {
+        id
+        name
+        url
+        featuredImage
+      }
     }
   }
 `

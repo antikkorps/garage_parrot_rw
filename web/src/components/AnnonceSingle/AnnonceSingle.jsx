@@ -16,6 +16,24 @@ const AnnonceSingle = ({ annonce }) => {
       <p>
         {annonce.createdAt} by {annonce.authorId}
       </p>
+      {annonce.Image.length > 0 && (
+        <>
+          <p>Images:</p>
+          {annonce.Image.map((image) =>
+            image.featuredImage ? (
+              <div key={image.id}>
+                <img
+                  src={image.url}
+                  alt={image.name}
+                  width="200px"
+                  height="auto"
+                />
+                <p>{image.name}</p>
+              </div>
+            ) : null
+          )}
+        </>
+      )}
     </article>
   )
 }
