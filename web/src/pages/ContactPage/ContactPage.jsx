@@ -43,55 +43,63 @@ const ContactPage = () => {
         config={{ mode: 'onBlur' }}
         error={error}
         formMethods={formMethods}
+        className="flex flex-col items-center justify-center"
       >
         <FormError error={error} wrapperClassName="form-error" />
-        <Label name="name" errorClassName="error">
-          Nom
-        </Label>
-        <TextField
-          name="name"
-          validation={{ required: true }}
-          errorClassName="error"
-        />
-        <FieldError name="name" className="error" />
 
-        <Label name="numero_de_telephone" errorClassName="error">
-          Téléphone
-        </Label>
-        <TextField
-          name="numero_de_telephone"
-          validation={{ required: true }}
-          errorClassName="error"
-        />
-        <FieldError name="numero_de_telephone" className="error" />
+        <div className="form_group my-4">
+          <Label name="name" errorClassName="error">
+            Nom
+          </Label>
+          <TextField
+            name="name"
+            validation={{ required: true }}
+            errorClassName="error"
+          />
+          <FieldError name="name" className="error" />
 
-        <Label name="email" errorClassName="error">
-          Email
-        </Label>
-        <TextField
-          name="email"
-          validation={{
-            required: true,
-            pattern: {
-              value: /^[^@]+@[^.]+\..+$/,
-              message: 'Please enter a valid email address',
-            },
-          }}
-          errorClassName="error"
-        />
-        <FieldError name="email" className="error" />
+          <Label name="numero_de_telephone" errorClassName="error">
+            Téléphone
+          </Label>
+          <TextField
+            name="numero_de_telephone"
+            validation={{ required: true }}
+            errorClassName="error"
+          />
+          <FieldError name="numero_de_telephone" className="error" />
 
-        <Label name="message" errorClassName="error">
-          Message
-        </Label>
-        <TextAreaField
-          name="message"
-          validation={{ required: true }}
-          errorClassName="error"
-        />
-        <FieldError name="message" className="error" />
+          <Label name="email" errorClassName="error">
+            Email
+          </Label>
+          <TextField
+            name="email"
+            validation={{
+              required: true,
+              pattern: {
+                value: /^[^@]+@[^.]+\..+$/,
+                message: 'Please enter a valid email address',
+              },
+            }}
+            errorClassName="error"
+          />
+          <FieldError name="email" className="error" />
 
-        <Button size="lg" colorScheme="red" rightIcon={<BiMailSend />}>
+          <Label name="message" errorClassName="error">
+            Message
+          </Label>
+          <TextAreaField
+            name="message"
+            validation={{ required: true }}
+            errorClassName="error"
+          />
+          <FieldError name="message" className="error" />
+        </div>
+        <Button
+          size="lg"
+          colorScheme="red"
+          rightIcon={<BiMailSend />}
+          className="my-4 block"
+        >
           <Submit disabled={loading}>Envoyer le formulaire</Submit>
         </Button>
       </Form>
