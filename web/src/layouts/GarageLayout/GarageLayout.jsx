@@ -9,7 +9,7 @@ const GarageLayout = ({ children }) => {
     <>
       <header>
         <div className="flex-between">
-          <h1>
+          <h1 className="text-xl font-medium text-slate-500">
             <Link to={routes.home()}>Garage Parrot</Link>
           </h1>
           {isAuthenticated ? (
