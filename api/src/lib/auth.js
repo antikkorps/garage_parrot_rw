@@ -101,10 +101,12 @@ export const hasRole = (roles) => {
  */
 export const requireAuth = ({ roles } = {}) => {
   if (!isAuthenticated()) {
-    throw new AuthenticationError("You don't have permission to do that.")
+    throw new AuthenticationError(
+      "Vous n'avez pas la permission de faire cette action."
+    )
   }
 
   if (roles && !hasRole(roles)) {
-    throw new ForbiddenError("You don't have access to do that.")
+    throw new ForbiddenError("Vous n'avez pas l'accès pour faire cette action.")
   }
 }
