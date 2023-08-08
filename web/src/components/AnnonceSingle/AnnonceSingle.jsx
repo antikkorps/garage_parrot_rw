@@ -2,7 +2,7 @@ import { Link, routes } from '@redwoodjs/router'
 
 const AnnonceSingle = ({ annonce }) => {
   return (
-    <article className="mx-4 my-5 max-w-sm overflow-hidden rounded shadow-lg">
+    <article className="mx-auto my-5 flex min-w-max max-w-lg justify-center overflow-hidden rounded shadow-lg">
       {annonce.Image.length > 0 && (
         <>
           {annonce.Image.map((image) =>
