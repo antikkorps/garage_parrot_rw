@@ -14,7 +14,7 @@ const HeroSection = () => {
               Trouvez votre nouvelle
               <span className="text-red-400"> voiture</span> qui vous correspond
             </h1>
-            <button className="mt-4 w-full transform rounded-md bg-red-600 px-5 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none lg:w-auto">
+            <button className="mt-4 w-full transform rounded-md bg-red-600 px-5 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-red-500 focus:bg-blue-500 focus:outline-none lg:w-auto">
               C&apos;est ici pour la trouver
             </button>
           </div>
