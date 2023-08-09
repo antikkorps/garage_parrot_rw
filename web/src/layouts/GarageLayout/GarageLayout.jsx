@@ -8,7 +8,7 @@ const GarageLayout = ({ children }) => {
   return (
     <>
       <header>
-        <nav className="flex flex-wrap items-center justify-between bg-teal-500 p-6">
+        <nav className="flex flex-wrap items-center justify-between bg-stone-950 p-6">
           <div className="mr-6 flex flex-shrink-0 items-center text-white">
             <svg
               className="mr-2 h-8 w-8 fill-current"
@@ -24,7 +24,7 @@ const GarageLayout = ({ children }) => {
             </span>
           </div>
           <div className="block lg:hidden">
-            <button className="flex items-center rounded border border-teal-400 px-3 py-2 text-teal-200 hover:border-white hover:text-white">
+            <button className="flex items-center rounded border border-red-400 px-3 py-2 text-red-200 hover:border-white hover:text-white">
               <svg
                 className="h-3 w-3 fill-current"
                 viewBox="0 0 20 20"
@@ -39,31 +39,33 @@ const GarageLayout = ({ children }) => {
             <div className="text-sm lg:flex-grow">
               <a
                 href="#responsive-header"
-                className="mr-4 mt-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+                className="mr-4 mt-4 block text-red-400 hover:text-white lg:mt-0 lg:inline-block"
               >
                 <Link to={routes.home()}>Accueil</Link>
               </a>
               <a
                 href="#responsive-header"
-                className="mr-4 mt-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+                className="mr-4 mt-4 block text-red-400 hover:text-white lg:mt-0 lg:inline-block"
               >
                 <Link to={routes.about()}>A propos</Link>
               </a>
               <a
                 href="#responsive-header"
-                className="mt-4 block text-teal-200 hover:text-white lg:mt-0 lg:inline-block"
+                className="mt-4 block text-red-400 hover:text-white lg:mt-0 lg:inline-block"
               >
                 <Link to={routes.contact()}>Contact</Link>
               </a>
             </div>
             <div>
               {isAuthenticated ? (
-                <div>
-                  <span>Logged in as {currentUser.email}</span>{' '}
+                <div className="flex flex-wrap">
+                  <div className="mx-2 mt-1 text-white">
+                    Utilsateur: {currentUser.email}
+                  </div>
                   <button
                     type="button"
                     onClick={logOut}
-                    className="mt-4 inline-block rounded border border-white px-4 py-2 text-sm leading-none text-white hover:border-transparent hover:bg-white hover:text-teal-500 lg:mt-0"
+                    className="mt-4 inline-block rounded border border-white px-4 py-2 text-sm leading-none text-white hover:border-red-400 hover:bg-stone-900 hover:text-red-400 lg:mt-0"
                   >
                     Logout
                   </button>
