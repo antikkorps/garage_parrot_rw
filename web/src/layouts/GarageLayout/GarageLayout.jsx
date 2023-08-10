@@ -1,6 +1,7 @@
 import { Link, routes } from '@redwoodjs/router'
 
 import { useAuth } from 'src/auth'
+import Footer from 'src/components/Footer/Footer'
 
 const GarageLayout = ({ children }) => {
   const { isAuthenticated, currentUser, logOut } = useAuth()
@@ -37,24 +38,26 @@ const GarageLayout = ({ children }) => {
           </div>
           <div className="block w-full flex-grow lg:flex lg:w-auto lg:items-center">
             <div className="text-sm lg:flex-grow">
-              <a
-                href="#responsive-header"
-                className="mr-4 mt-4 block text-red-400 hover:text-white lg:mt-0 lg:inline-block"
+              <Link
+                to={routes.home()}
+                className="mr-4 mt-4 block text-white transition-colors duration-300 hover:text-red-400 lg:mt-0 lg:inline-block"
               >
-                <Link to={routes.home()}>Accueil</Link>
-              </a>
-              <a
-                href="#responsive-header"
-                className="mr-4 mt-4 block text-red-400 hover:text-white lg:mt-0 lg:inline-block"
+                Accueil
+              </Link>
+
+              <Link
+                to={routes.about()}
+                className="mr-4 mt-4 block text-white transition-colors duration-300 hover:text-red-400 lg:mt-0 lg:inline-block"
               >
-                <Link to={routes.about()}>A propos</Link>
-              </a>
-              <a
-                href="#responsive-header"
-                className="mt-4 block text-red-400 hover:text-white lg:mt-0 lg:inline-block"
+                A propos
+              </Link>
+
+              <Link
+                to={routes.contact()}
+                className="mr-4 mt-4 block text-white transition-colors duration-300 hover:text-red-400 lg:mt-0 lg:inline-block"
               >
-                <Link to={routes.contact()}>Contact</Link>
-              </a>
+                Contact
+              </Link>
             </div>
             <div>
               {isAuthenticated ? (
@@ -78,6 +81,7 @@ const GarageLayout = ({ children }) => {
         </nav>
       </header>
       <main>{children}</main>
+      <Footer />
     </>
   )
 }
