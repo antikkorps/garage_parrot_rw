@@ -48,12 +48,11 @@ const Footer = () => {
               </Link>
 
               <Link
-                to={routes.home()}
+                to={routes.cookies()}
                 className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-red-500 dark:text-gray-300 dark:hover:text-red-400"
                 aria-label="Reddit"
               >
-                {' '}
-                Cookies{' '}
+                Cookies
               </Link>
             </div>
           </div>
