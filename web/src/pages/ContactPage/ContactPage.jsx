@@ -38,12 +38,19 @@ const ContactPage = () => {
       <MetaTags title="Contact" description="Contact page" />
 
       <Toaster />
+      <h2 className="mx-auto mt-10 text-center text-xl font-bold text-red-500">
+        Contactez nous !
+      </h2>
+      <p className="mx-auto mt-3 text-center text-xl font-medium sm:w-1/2">
+        La meilleure façon de nous contacter et de le faire par le formulaire
+        ci-dessous en précisant votre demande
+      </p>
       <Form
         onSubmit={onSubmit}
         config={{ mode: 'onBlur' }}
         error={error}
         formMethods={formMethods}
-        className="flex flex-col items-center justify-center"
+        className="mx-auto my-5 flex w-full flex-col items-center justify-center sm:w-1/2"
       >
         <FormError error={error} wrapperClassName="form-error" />
 
