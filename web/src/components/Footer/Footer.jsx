@@ -56,6 +56,15 @@ const Footer = () => {
               </Link>
             </div>
           </div>
+          <div className="my-4 flex justify-center">
+            <h2 className="mx-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-300">
+              Horaires du garage
+            </h2>
+            <p className="mx-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-300">
+              {' '}
+              ICI LE COMPONENT
+            </p>
+          </div>
 
           <hr className="my-6 border-gray-200 dark:border-gray-700 md:my-10" />
 
