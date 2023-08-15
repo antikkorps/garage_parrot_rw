@@ -1,3 +1,5 @@
+import { Input, InputGroup, InputRightAddon } from '@chakra-ui/react'
+
 const HeroSection = () => {
   return (
     <>
@@ -19,6 +21,12 @@ const HeroSection = () => {
             </button>
           </div>
         </div>
+      </div>
+      <div className="mx-auto flex w-1/2">
+        <InputGroup size="lg" className="mt-5">
+          <Input placeholder="Basic usage" />
+          <InputRightAddon children="Rechercher" />
+        </InputGroup>
       </div>
     </>
   )
