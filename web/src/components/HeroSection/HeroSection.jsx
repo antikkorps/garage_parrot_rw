@@ -31,12 +31,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto my-10 flex sm:w-1/2">
-        <InputGroup size="lg" className="mt-5">
-          <Input placeholder="Trouvez votre véhicule" />
-          <InputRightAddon children="Rechercher" />
-        </InputGroup>
-      </div>
     </>
   )
 }

@@ -74,7 +74,12 @@ const GarageLayout = ({ children }) => {
                   </button>
                 </div>
               ) : (
-                <Link to={routes.login()}>Login</Link>
+                <Link
+                  to={routes.login()}
+                  className="mt-4 inline-block rounded border border-white px-4 py-2 text-sm leading-none text-white hover:border-red-400 hover:bg-stone-900 hover:text-red-400 lg:mt-0"
+                >
+                  Login
+                </Link>
               )}
             </div>
           </div>
