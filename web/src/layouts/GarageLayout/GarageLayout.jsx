@@ -5,7 +5,6 @@ import Footer from 'src/components/Footer/Footer'
 
 const GarageLayout = ({ children }) => {
   const { isAuthenticated, currentUser, logOut } = useAuth()
-
   return (
     <>
       <header>
@@ -25,7 +24,7 @@ const GarageLayout = ({ children }) => {
             </span>
           </div>
           <div className="block lg:hidden">
-            <button className="flex items-center rounded border border-red-400 px-3 py-2 text-red-200 hover:border-white hover:text-white">
+            <button className="menu-mobile flex items-center rounded border border-white px-3 py-2 text-white transition-colors duration-300 hover:border-red-400 hover:text-red-400">
               <svg
                 className="h-3 w-3 fill-current"
                 viewBox="0 0 20 20"
@@ -68,7 +67,7 @@ const GarageLayout = ({ children }) => {
                   <button
                     type="button"
                     onClick={logOut}
-                    className="mt-4 inline-block rounded border border-white px-4 py-2 text-sm leading-none text-white hover:border-red-400 hover:bg-stone-900 hover:text-red-400 lg:mt-0"
+                    className="mt-4 inline-block rounded border border-white px-4 py-2 text-sm leading-none text-white transition-colors duration-300 hover:border-red-400 hover:bg-stone-900 hover:text-red-400 lg:mt-0"
                   >
                     Logout
                   </button>
@@ -76,7 +75,7 @@ const GarageLayout = ({ children }) => {
               ) : (
                 <Link
                   to={routes.login()}
-                  className="mt-4 inline-block rounded border border-white px-4 py-2 text-sm leading-none text-white hover:border-red-400 hover:bg-stone-900 hover:text-red-400 lg:mt-0"
+                  className="mt-4 inline-block rounded border border-white px-4 py-2 text-sm leading-none text-white transition-colors duration-300 hover:border-red-400 hover:bg-stone-900 hover:text-red-400 lg:mt-0"
                 >
                   Login
                 </Link>
