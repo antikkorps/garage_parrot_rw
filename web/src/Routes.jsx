@@ -42,6 +42,12 @@ const Routes = () => {
           <Route path="/admin/annonces/{id:Int}" page={AnnonceAnnoncePage} name="annonce" />
           <Route path="/admin/annonces" page={AnnonceAnnoncesPage} name="annonces" />
         </Set>
+        <Set wrap={ScaffoldLayout} title="Horaires" titleTo="horaires" buttonLabel="New Horaire" buttonTo="newHoraire">
+          <Route path="/admin/horaires/new" page={HoraireNewHorairePage} name="newHoraire" />
+          <Route path="/admin/horaires/{id:Int}/edit" page={HoraireEditHorairePage} name="editHoraire" />
+          <Route path="/admin/horaires/{id:Int}" page={HoraireHorairePage} name="horaire" />
+          <Route path="/admin/horaires" page={HoraireHorairesPage} name="horaires" />
+        </Set>
       </Private>
       <Set wrap={GarageLayout}>
         <Route path="/" page={HomePage} name="home" />

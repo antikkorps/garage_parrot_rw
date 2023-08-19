@@ -1,5 +1,7 @@
 import { Link, routes } from '@redwoodjs/router'
 
+import HoraireComponent from '../HoraireComponent/HoraireComponent'
+
 const Footer = () => {
   return (
     <>
@@ -64,6 +66,7 @@ const Footer = () => {
               {' '}
               ICI LE COMPONENT
             </p>
+            <HoraireComponent />
           </div>
 
           <hr className="my-6 border-gray-200 dark:border-gray-700 md:my-10" />

@@ -65,3 +65,12 @@ model Contact {
   numero_de_telephone String
   createdAt DateTime @default(now())
 }
+
+model Horaire {
+  id         Int      @id @default(autoincrement())
+  jourDeLaSemaine  String
+  openingAM  DateTime
+  closingAM  DateTime
+  openingPM  DateTime
+  closingPM  DateTime
+}
